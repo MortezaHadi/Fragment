@@ -30,14 +30,16 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.871" />
 
-    <FrameLayout
-        android:name="com.example.fragment.FirstFragment"
+    <androidx.fragment.app.FragmentContainerView
+        android:name="androidx.navigation.fragment.NavHostFragment"
         android:id="@+id/fragment"
         android:layout_margin="32dp"
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        app:defaultNavHost="true"
         app:layout_constraintBottom_toTopOf="@+id/button2"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:navGraph="@navigation/my_nav"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
